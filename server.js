@@ -2,9 +2,7 @@
 var mysql      = require('mysql');
 var connection = mysql.createPool({
   host     : 'hyderdevelops.ml',
-  user     : "qszebbzf_hyder",
-  password : "Root@linux20",
-  database : "qszebbzf_academics",
+
   port:3306,
 });
 
