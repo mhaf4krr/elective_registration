@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <p class="header-text">DEPT. OF COMPUTER SC. & ENGINEERING</p>
+    </header>
+
+    <section>
+        <div class="form-group">
+            <h4>Check Your Preference</h4>
+            <label for="check"></label>
+            <input type="text" name="check" placeholder="email/phone" id="check">
+            <button id="checkBtn" onclick="checkPreference()">Check</button>
+            <div class="pref-area">
+
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="card"> 
+            <div class="logo">
+                <img src="LOGO.png" alt="" class="logo">
+            </div>
+
+            <p class="text">8th Semester Elective Registration</p>
+            
+
+            <form action="/register" method="POST">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Registration No.</label>
+                    <input type="text" name="registration" id="registration" placeholder="Your Registration Number" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="roll_number">Roll No.</label>
+                    <input type="text" name="roll_number" id="roll_number" placeholder="Your Roll Number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="number" name="phone" id="phone" maxlength="10" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder=" Your working Email" required>
+                    <button class="email_send_btn">Send OTP</button>
+                    
+                </div>
+    
+                <div class="form-group otp-section">
+                    <p>OTP sent,check in INBOX / SPAM</p>
+                    <input type="number" id="otp" placeholder="ENTER OTP" required>
+                    <button class="verify_otp_btn">VERIFY OTP</button>
+                </div>
+    
+                
+    
+               <div class="form-group">
+                   <label for="elective1">Elective 1</label>
+                   <select name="elective1" id="elective1">
+                      
+
+                       <% if (dl > 0) { %>
+                        <option value="deep_learning">Deep Learning [Remaining:<%= dl %>]</option>
+
+                       <% } %>
+
+                       <% if (ce > 0) { %>
+                        <option value="computational_ethics">Computational Ethics Design [Remaining:<%= ce %>]</option>
+
+                       <% } %>
+
+                   </select>
+               </div>
+    
+               <div class="form-group">
+                <label for="elective2">Elective 2</label>
+                <select name="elective2" id="elective2">
+                   
+                    <% if (cc > 0) { %>
+                        <option value="cloud_computing">Cloud Computing [Remaining:<%= cc %>]</option>
+                    <% } %>
+
+                    <% if (cv > 0) { %>
+                        <option value="computer_vision">Computer Vision - [Remaining:<%= cv %>]</option>
+                    <% } %>
+                    
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="REGISTER" class="register_btn">
+            </div>
+            </form>
+
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

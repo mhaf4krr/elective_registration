@@ -1,0 +1,71 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+header {
+    height:4vh;
+    color:black;
+    font-weight: bolder;
+    padding-top: .5rem;
+    font-size: 18px;
+    text-align: center;
+}
+.logo {
+    text-align: center;
+    width:10vh;
+    margin: auto auto;
+    padding-top:.6rem;
+
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:90vh;
+    width:100vw;
+}
+
+.card{
+    height:95%;
+    width: 90%;
+    box-shadow: 0px 3px 23px black;
+    border-radius: 10px;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+input[type="text"],input[type="email"],input[type="number"]{
+    outline: none;
+    outline-width: 0px;
+    border: 0px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+div.form-group{
+    
+    margin-top:2rem;
+    text-align: center;
+    
+}
+
+button{
+    padding:.3rem .3rem;
+    color:black
+}
+
+.register_btn {
+    padding:.6rem .6rem;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+}
+
+.otp-section{
+    display: none;
+}
